@@ -20,9 +20,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@fontsource-variable/dm-sans": "^5.2.5",
-    "@fontsource-variable/ubuntu-sans-mono": "^5.2.6",
-    "@fontsource-variable/source-serif-4": "^5.2.6",
     "@react-router/dev": "^7.5.0",
     "@tailwindcss/vite": "^4.1.4",
     "@types/node": "^22.14.1",

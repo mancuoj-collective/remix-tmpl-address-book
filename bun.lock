@@ -13,9 +13,6 @@
       },
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
-        "@fontsource-variable/dm-sans": "^5.2.5",
-        "@fontsource-variable/source-serif-4": "^5.2.6",
-        "@fontsource-variable/ubuntu-sans-mono": "^5.2.6",
         "@react-router/dev": "^7.5.0",
         "@tailwindcss/vite": "^4.1.4",
         "@types/node": "^22.14.1",
@@ -158,12 +155,6 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.25.2", "", { "os": "win32", "cpu": "ia32" }, "sha512-WRJgsz9un0nqZJ4MfhabxaD9Ft8KioqU3JMinOTvobbX6MOSUigSBlogP8QB3uxpJDsFS6yN+3FDBdqE5lg9kg=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.2", "", { "os": "win32", "cpu": "x64" }, "sha512-kM3HKb16VIXZyIeVrM1ygYmZBKybX8N4p754bw390wGO3Tf2j4L2/WYL+4suWujpgf6GBYs3jv7TyUivdd05JA=="],
-
-    "@fontsource-variable/dm-sans": ["@fontsource-variable/dm-sans@5.2.5", "", {}, "sha512-ynWdb1Ncn5ywUOE6OkTsvgjkiZKj+xM/GS2iVE47MBvS3AlfOSyOy3xynfkQsM3ngaxdCamT/06hZGAgPmao0A=="],
-
-    "@fontsource-variable/source-serif-4": ["@fontsource-variable/source-serif-4@5.2.6", "", {}, "sha512-IpAjvl5rJdGNQMXtwf7Y5EGEkX4i8A0jcEuM4Jh4XGCr63Jlrz8ySM0z+Ds3x1xG7g2yemgn75HzMZlgbtz7Ww=="],
-
-    "@fontsource-variable/ubuntu-sans-mono": ["@fontsource-variable/ubuntu-sans-mono@5.2.6", "", {}, "sha512-4fwSe6U+2ccVG6MVZU4oD5cvsziV5qEnRRxeLRCatxQvnQHrL4YuVnL83Bfiam48FemTDp9dxTq+lbGn8glsYg=="],
 
     "@isaacs/cliui": ["@isaacs/cliui@8.0.2", "", { "dependencies": { "string-width": "^5.1.2", "string-width-cjs": "npm:string-width@^4.2.0", "strip-ansi": "^7.0.1", "strip-ansi-cjs": "npm:strip-ansi@^6.0.1", "wrap-ansi": "^8.1.0", "wrap-ansi-cjs": "npm:wrap-ansi@^7.0.0" } }, "sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA=="],
 
