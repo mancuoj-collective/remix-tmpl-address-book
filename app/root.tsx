@@ -28,7 +28,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <div className="relative">
+        <div className="relative font-sans antialiased font-bold">
           <div className="texture" />
           {children}
         </div>
@@ -97,8 +97,8 @@ export default function App({ loaderData }: Route.ComponentProps) {
 
 export function HydrateFallback() {
   return (
-    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-3">
-      <LoaderCircleIcon className="size-10 animate-spin" />
+    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-5">
+      <div className="loading loading-bars loading-xl" />
       <p>Loading, please wait...</p>
     </div>
   )
