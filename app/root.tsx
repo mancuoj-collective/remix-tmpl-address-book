@@ -3,6 +3,7 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse }
 import { TwScreenIndicator } from '@/components/tw-screen-indicator'
 import type { Route } from './+types/root'
 import '@/app.css'
+import { createEmptyContact } from '@/data'
 
 export const links: Route.LinksFunction = () => [
   { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -28,6 +29,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </body>
     </html>
   )
+}
+
+export async function action() {
+  const contact = await createEmptyContact();
+  return { contact };
 }
 
 export default function App() {

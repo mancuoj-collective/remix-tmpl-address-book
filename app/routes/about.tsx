@@ -2,8 +2,8 @@ import { Link } from 'react-router'
 
 export default function About() {
   return (
-    <div className="flex flex-col p-3 justify-center items-center min-h-svh">
-      <div className="w-[50vw]">
+    <div className="flex flex-col justify-center items-center min-h-svh">
+      <div className="w-[50vw] max-w-lg">
         <h1 className="text-xl font-serif mb-3">About React Router Address Book</h1>
         <p>
           This is a demo application showing off some of the powerful features of React Router,
