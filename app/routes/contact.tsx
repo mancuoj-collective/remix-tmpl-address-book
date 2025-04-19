@@ -18,14 +18,14 @@ export default function Contact({ loaderData }: Route.ComponentProps) {
       <div className="flex gap-5 items-center">
         {contact.avatar ? (
           <img
-            className="avatar size-24 rounded-xl"
+            className="avatar size-24 rounded-xl ring-primary ring-2"
             alt={`${contact.first} ${contact.last} avatar`}
             key={contact.avatar}
             src={contact.avatar}
           />
         ) : (
           <div className="avatar avatar-placeholder">
-            <div className="bg-neutral text-neutral-content size-24 rounded-full">
+            <div className="bg-neutral text-neutral-content size-24 rounded-xl ring-primary ring-2">
               <span className="text-2xl">Hi</span>
             </div>
           </div>

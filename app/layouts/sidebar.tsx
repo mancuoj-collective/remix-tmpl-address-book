@@ -16,7 +16,7 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
     <div className="flex flex-col min-h-svh justify-center items-center">
       <div className="flex gap-3 h-[70vh]">
         <div className="flex flex-col gap-3 w-[24vw] max-w-80">
-          <div className="flex gap-1.5 bg-base-300 rounded-box p-2">
+          <div className="flex gap-2.5 bg-base-300 rounded-box p-2">
             <Form className="input flex-1">
               <SearchIcon className="size-4" />
               <input type="search" placeholder="Search" name="q" />
