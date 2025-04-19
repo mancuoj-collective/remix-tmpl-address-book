@@ -1,4 +1,12 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, redirect } from 'react-router'
+import {
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  isRouteErrorResponse,
+  redirect,
+} from 'react-router'
 
 import { TwScreenIndicator } from '@/components/tw-screen-indicator'
 import type { Route } from './+types/root'
@@ -32,8 +40,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export async function action() {
-  const contact = await createEmptyContact();
-  return redirect(`/contacts/${contact.id}/edit`);
+  const contact = await createEmptyContact()
+  return redirect(`/contacts/${contact.id}/edit`)
 }
 
 export default function App() {

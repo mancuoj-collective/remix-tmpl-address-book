@@ -1,7 +1,7 @@
 import { getContacts } from '@/data'
+import { cn } from '@/lib/utils'
 import { SearchIcon } from 'lucide-react'
-import { Form, Outlet } from 'react-router'
-import { Link } from 'react-router'
+import { Form, NavLink, Outlet, useNavigation } from 'react-router'
 import type { Route } from './+types/sidebar'
 
 export async function loader() {
@@ -11,6 +11,7 @@ export async function loader() {
 
 export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
   const { contacts } = loaderData
+  const navigation = useNavigation()
 
   return (
     <div className="flex flex-col min-h-svh justify-center items-center">
@@ -34,7 +35,12 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
               <ul>
                 {contacts.map((contact) => (
                   <li key={contact.id}>
-                    <Link to={`contacts/${contact.id}`}>
+                    <NavLink
+                      className={({ isActive, isPending }) =>
+                        isActive ? 'bg-base-200' : isPending ? 'opacity-60 bg-base-200' : ''
+                      }
+                      to={`contacts/${contact.id}`}
+                    >
                       {contact.first || contact.last ? (
                         <>
                           {contact.first} {contact.last}
@@ -43,7 +49,7 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
                         <i>No Name</i>
                       )}
                       {contact.favorite ? <span>★</span> : null}
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -54,7 +60,12 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
             )}
           </nav>
         </div>
-        <div className="bg-base-300 rounded-box w-[48vw] max-w-2xl">
+        <div
+          className={cn(
+            'bg-base-300 rounded-box w-[48vw] max-w-2xl',
+            navigation.state === 'loading' ? 'opacity-60' : '',
+          )}
+        >
           <Outlet />
         </div>
       </div>
