@@ -1,7 +1,6 @@
-import { Form, redirect } from 'react-router'
-import type { Route } from './+types/edit-contact'
-
 import { getContact, updateContact } from '@/data'
+import { Form, redirect, useNavigate } from 'react-router'
+import type { Route } from './+types/edit-contact'
 
 export async function loader({ params }: Route.LoaderArgs) {
   const contact = await getContact(params.contactId)
@@ -20,6 +19,7 @@ export async function action({ params, request }: Route.ActionArgs) {
 
 export default function EditContact({ loaderData }: Route.ComponentProps) {
   const { contact } = loaderData
+  const navigate = useNavigate()
 
   return (
     <div className="flex items-center justify-center h-full">
@@ -58,7 +58,7 @@ export default function EditContact({ loaderData }: Route.ComponentProps) {
           <button type="submit" className="btn btn-primary">
             Save
           </button>
-          <button type="button" className="btn">
+          <button type="button" className="btn" onClick={() => navigate(-1)}>
             Cancel
           </button>
         </div>
