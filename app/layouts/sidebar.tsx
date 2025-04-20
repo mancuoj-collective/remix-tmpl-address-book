@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import { SearchIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Form, NavLink, Outlet, useNavigation, useSubmit } from 'react-router'
+import { useDebounceCallback } from 'usehooks-ts'
 import type { Route } from './+types/sidebar'
 
 export async function loader({ request }: Route.LoaderArgs) {
@@ -16,6 +17,7 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
   const navigation = useNavigation()
   const [query, setQuery] = useState(q || '')
   const submit = useSubmit()
+  const debouncedSubmit = useDebounceCallback(submit, 500)
   const searching = navigation.location && new URLSearchParams(navigation.location.search).has('q')
 
   useEffect(() => {
@@ -42,7 +44,7 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
                 onChange={(e) => {
                   setQuery(e.target.value)
                   const isFirstSearch = q === null
-                  submit(e.target.form, { replace: !isFirstSearch })
+                  debouncedSubmit(e.target.form, { replace: !isFirstSearch })
                 }}
               />
             </Form>

@@ -60,10 +60,16 @@ const fakeContacts = {
   },
 }
 
+async function fakeNetwork() {
+  return new Promise((res) => {
+    setTimeout(res, Math.random() * 800)
+  })
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // Handful of helper functions to be called from route loaders and actions
 export async function getContacts(query?: string | null) {
-  await new Promise((resolve) => setTimeout(resolve, 500))
+  await fakeNetwork()
   let contacts = await fakeContacts.getAll()
   if (query) {
     contacts = matchSorter(contacts, query, {
@@ -79,6 +85,7 @@ export async function createEmptyContact() {
 }
 
 export async function getContact(id: string) {
+  await fakeNetwork()
   return fakeContacts.get(id)
 }
 
@@ -87,14 +94,17 @@ export async function updateContact(id: string, updates: ContactMutation) {
   if (!contact) {
     throw new Error(`No contact found for ${id}`)
   }
+  await fakeNetwork()
   await fakeContacts.set(id, { ...contact, ...updates })
   return contact
 }
 
 export async function deleteContact(id: string) {
+  await fakeNetwork()
   fakeContacts.destroy(id)
 }
-;[
+
+const initialContacts = [
   {
     avatar: 'https://sessionize.com/image/124e-400o400o2-wHVdAuNaxi8KJrgtN3ZKci.jpg',
     first: 'Shruti',
@@ -276,7 +286,9 @@ export async function deleteContact(id: string) {
     last: 'Jensen',
     twitter: '@jenseng',
   },
-].forEach((contact) => {
+]
+
+initialContacts.forEach((contact) => {
   fakeContacts.create({
     ...contact,
     id: `${contact.first.toLowerCase().split(' ').join('_')}-${contact.last.toLocaleLowerCase()}`,
