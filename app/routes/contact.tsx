@@ -38,7 +38,7 @@ export default function Contact({ loaderData }: Route.ComponentProps) {
           </div>
         )}
         <div className="flex flex-col gap-1">
-          <h1 className="flex gap-2 text-lg">
+          <h1 className="flex gap-2 text-lg items-center">
             {contact.first || contact.last ? (
               <>
                 {contact.first} {contact.last}

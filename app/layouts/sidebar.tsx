@@ -61,7 +61,10 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
                 <li key={contact.id}>
                   <NavLink
                     className={({ isActive, isPending }) =>
-                      isActive ? 'bg-base-200' : isPending ? 'opacity-60 bg-base-200' : ''
+                      cn(
+                        'inline-flex items-center gap-2',
+                        isActive ? 'bg-base-200' : isPending ? 'opacity-60 bg-base-200' : '',
+                      )
                     }
                     to={`contacts/${contact.id}`}
                   >
@@ -78,7 +81,9 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
               ))
             ) : (
               <li>
-                <i>No contacts</i>
+                <a>
+                  <i>No contacts</i>
+                </a>
               </li>
             )}
           </ul>
