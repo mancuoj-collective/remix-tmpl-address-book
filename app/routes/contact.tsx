@@ -1,4 +1,4 @@
-import { type ContactRecord, getContact, updateContact } from '@/data'
+import { type ContactRecord, getContact, updateContact } from '@/lib/data'
 import { Form, useFetcher } from 'react-router'
 import type { Route } from './+types/contact'
 

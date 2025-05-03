@@ -1,4 +1,4 @@
-import { getContact, updateContact } from '@/data'
+import { getContact, updateContact } from '@/lib/data'
 import { Form, redirect, useNavigate } from 'react-router'
 import type { Route } from './+types/edit-contact'
 

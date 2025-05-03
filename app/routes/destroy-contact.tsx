@@ -1,4 +1,4 @@
-import { deleteContact } from '@/data'
+import { deleteContact } from '@/lib/data'
 import { redirect } from 'react-router'
 import type { Route } from './+types/destroy-contact'
 

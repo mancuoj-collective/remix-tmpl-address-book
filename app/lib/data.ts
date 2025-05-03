@@ -62,7 +62,7 @@ const fakeContacts = {
 
 async function fakeNetwork() {
   return new Promise((res) => {
-    setTimeout(res, Math.random() * 800)
+    setTimeout(res, Math.random() * 500)
   })
 }
 
@@ -121,7 +121,59 @@ const initialContacts = [
     avatar: 'https://sessionize.com/image/9273-400o400o2-3tyrUE3HjsCHJLU5aUJCja.jpg',
     first: 'Ryan',
     last: 'Florence',
-  }
+  },
+  {
+    avatar: 'https://sessionize.com/image/d14d-400o400o2-pyB229HyFPCnUcZhHf3kWS.png',
+    first: 'Oscar',
+    last: 'Newman',
+    twitter: '@__oscarnewman',
+  },
+  {
+    avatar: 'https://sessionize.com/image/fd45-400o400o2-fw91uCdGU9hFP334dnyVCr.jpg',
+    first: 'Michael',
+    last: 'Jackson',
+  },
+  {
+    avatar: 'https://sessionize.com/image/b07e-400o400o2-KgNRF3S9sD5ZR4UsG7hG4g.jpg',
+    first: 'Christopher',
+    last: 'Chedeau',
+    twitter: '@Vjeux',
+  },
+  {
+    avatar: 'https://sessionize.com/image/262f-400o400o2-UBPQueK3fayaCmsyUc1Ljf.jpg',
+    first: 'Cameron',
+    last: 'Matheson',
+    twitter: '@cmatheson',
+  },
+  {
+    avatar: 'https://sessionize.com/image/820b-400o400o2-Ja1KDrBAu5NzYTPLSC3GW8.jpg',
+    first: 'Brooks',
+    last: 'Lybrand',
+    twitter: '@BrooksLybrand',
+  },
+  {
+    avatar: 'https://sessionize.com/image/df38-400o400o2-JwbChVUj6V7DwZMc9vJEHc.jpg',
+    first: 'Alex',
+    last: 'Anderson',
+    twitter: '@ralex1993',
+  },
+  {
+    avatar: 'https://sessionize.com/image/5578-400o400o2-BMT43t5kd2U1XstaNnM6Ax.jpg',
+    first: 'Kent C.',
+    last: 'Dodds',
+    twitter: '@kentcdodds',
+  },
+  {
+    avatar: 'https://sessionize.com/image/c9d5-400o400o2-Sri5qnQmscaJXVB8m3VBgf.jpg',
+    first: 'Nevi',
+    last: 'Shah',
+    twitter: '@nevikashah',
+  },
+  {
+    avatar: 'https://sessionize.com/image/2694-400o400o2-MYYTsnszbLKTzyqJV17w2q.png',
+    first: 'Andrew',
+    last: 'Petersen',
+  },
 ]
 
 initialContacts.forEach((contact) => {

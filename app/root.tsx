@@ -11,7 +11,7 @@ import {
 import { TwScreenIndicator } from '@/components/tw-screen-indicator'
 import type { Route } from './+types/root'
 import '@/app.css'
-import { createEmptyContact } from '@/data'
+import { createEmptyContact } from '@/lib/data'
 
 export const links: Route.LinksFunction = () => [
   { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },

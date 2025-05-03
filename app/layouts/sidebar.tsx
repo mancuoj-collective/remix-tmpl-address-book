@@ -1,4 +1,4 @@
-import { getContacts } from '@/data'
+import { getContacts } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { SearchIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
@@ -60,6 +60,7 @@ export default function SidebarLayout({ loaderData }: Route.ComponentProps) {
               contacts.map((contact) => (
                 <li key={contact.id}>
                   <NavLink
+                    viewTransition
                     className={({ isActive, isPending }) =>
                       cn(
                         'inline-flex items-center gap-2',
